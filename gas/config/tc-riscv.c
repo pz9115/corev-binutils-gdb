@@ -358,8 +358,8 @@ riscv_multi_subset_supports (enum riscv_insn_class insn_class)
     case INSN_CLASS_ZBC:
       return riscv_subset_supports ("zbc");
 
-    case INSN_CLASS_ZCEE:
-      return riscv_subset_supports ("zcee");
+    case INSN_CLASS_ZCEE_OR_C:
+      return riscv_subset_supports ("zcee") || riscv_subset_supports ("c");
 
     case INSN_CLASS_COREV_HWLP:
       return riscv_subset_supports ("xcorevhwlp") || riscv_subset_supports ("xcorev");
